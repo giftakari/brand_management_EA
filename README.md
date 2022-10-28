@@ -1,5 +1,7 @@
 # All the entire code is in App.js
 
+The data for the mock server is located in db.json file 
+
 
 Clone the repo and run 
 
@@ -8,19 +10,38 @@ npm install
 ```
 
 To run the mock server, type 
-
+```js 
+ json-server --watch db.json --port 3004
+ 
+```
+ and then visit to see the api endpoint
 
 ```js
 "http://localhost:3004/brands"
 ```
-  This can be replaced with 
+ This endpoint can be replaced with
 
   ```js
 
    "https://eacp.energyaustralia.com.au/codingtest/api/v1/festivals"
 
    ```
+   in the App.js file in line 12
+   
+   To rum the React, type 
+```js 
+npm start 
 
+```
+
+And then visit 
+```js
+localhost:3000
+
+```
+
+
+![Screen Shot 2022-10-28 at 2 32 34 pm](https://user-images.githubusercontent.com/37270379/198503114-916b8096-a45a-4410-a182-9af72d0479e1.png)
 
 
 # Getting Started with Create React App
