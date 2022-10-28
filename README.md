@@ -1,3 +1,28 @@
+# All the entire code is in App.js
+
+
+Clone the repo and run 
+
+```js
+npm install 
+```
+
+To run the mock server, type 
+
+
+```js
+"http://localhost:3004/brands"
+```
+  This can be replaced with 
+
+  ```js
+
+   "https://eacp.energyaustralia.com.au/codingtest/api/v1/festivals"
+
+   ```
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
