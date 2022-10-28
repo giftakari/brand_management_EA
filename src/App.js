@@ -1,6 +1,7 @@
 import "./App.css"
 import { useState } from "react"
 import { useEffect } from "react"
+import { Link } from "react-router-dom"
 
 /** Requirements
  *
@@ -38,22 +39,30 @@ function App() {
         setBrands(data)
         setLoading(false)
       })
+      .catch(err => console.log(err))
     )
   }, [])
 
+  // if data is not ready, display a Loadding
+
+  if(loading){
+    return <h2>Loading ...</h2>
+  }
+
   // console.log(sortedBrand)
   return (
-    <div>
+    <div > 
       <h1>Brand Management</h1>
       {/** When the data is ready loop through it and display */}
       {brands &&
         brands.sort().map((brand, index) => {
           return (
-            <div key={index}>
+            <div key={index} style={{border:"3px solid gold", margin:"1rem"}}>
               <h3>{brand.name}</h3>
-              <ul>
-                <li></li>
-              </ul>
+             {brand.bands.map((singleBrand, key )=> <ul key={key}>
+              <li>{singleBrand.recordLabel}</li>
+              <li>{singleBrand.name}</li> 
+             </ul>)}
             </div>
           )
         })}
